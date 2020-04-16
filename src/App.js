@@ -3,6 +3,7 @@ import formatNumber from "format-number";
 import photographer from "./images/girl.png";
 import "./App.css";
 import {store} from "./store/index.js";
+import {dispatchButtonAction} from './actions/index.js';
 
 class App extends Component {
   render() {
@@ -17,8 +18,8 @@ class App extends Component {
         </div>
 
         <section className="App__buttons">
-          <button data-amount="10000">WITHDRAW $10,000</button>
-          <button data-amount="5000">WITHDRAW $5,000</button>
+          <button data-amount="10000" onClick={dispatchButtonAction}>WITHDRAW $10,000</button>
+          <button data-amount="5000" onClick={dispatchButtonAction}>WITHDRAW $5,000</button>
         </section>
 
         <p className="App__giveaway">Give away all your cash to charity</p>
